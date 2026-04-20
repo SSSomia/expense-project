@@ -1,3 +1,4 @@
+import 'package:expense_project/colors/app_colors.dart';
 import 'package:expense_project/ui/add_expense_screen.dart';
 import 'package:expense_project/widgets/expense_item_widget.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.indigo,
+              color: buttonColor,
               borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
@@ -62,6 +63,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: buttonColor,
         onPressed: () {
           Navigator.push(
             context,
@@ -70,7 +72,7 @@ class HomeScreen extends StatelessWidget {
             ),
           );
         },
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add, color: Color.fromARGB(255, 255, 255, 255),),
       ),
     );
   }
